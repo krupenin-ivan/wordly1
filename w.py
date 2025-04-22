@@ -43,3 +43,19 @@ words = [
     "исполняю", "применя"
     ]
  # Список слов
+print("Добро пожаловать в игру 'Угадай слово!'")
+
+# Выбор слова
+word = random.choice(words)
+word_length = len(word)
+
+# Выбор количества попыток
+while True:
+    attempts = int(input("Выберите количество попыток: "))
+    if attempts > 0:
+        break
+    elif attempts.isdigit() is not True:
+        print("Введите целое число")
+    else:
+        print("Количество попыток должно быть больше 0.")
+    
